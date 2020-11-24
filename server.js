@@ -14,6 +14,6 @@ app.get("/api/test", (req, res) => {
     })
 });
 
-server.listen(PORT, () => {
+app.listen(PORT, () => {
     console.log("LISTENING ON " + PORT);
 });
