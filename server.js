@@ -15,10 +15,10 @@ app.use((req, res, next) => {
     next();
 })
 
-app.get("/api/test", (req, res) => {
-    console.log(req.body);
-
-    res.json({ hello: "world" });
+app.get("/api/grabKey", (req, res) => {
+    res.json({
+        access: process.env.API_KEY
+    });
 });
 
 const server = https.createServer(options, app)
