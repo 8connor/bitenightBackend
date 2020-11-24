@@ -14,8 +14,6 @@ app.get("/api/test", (req, res) => {
     })
 });
 
-var server = https.createServer(options, app)
-
 server.listen(PORT, () => {
     console.log("LISTENING ON " + PORT);
 });
