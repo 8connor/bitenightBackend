@@ -1,3 +1,7 @@
 node_modules
 *.pem
+<<<<<<< HEAD
+*.env
+=======
 .env
+>>>>>>> a5402e6351f7ad0253d29b7a698862066e0b6905
