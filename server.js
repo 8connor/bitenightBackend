@@ -11,12 +11,14 @@ const options = {
     cert: fs.readFileSync('./cert.pem')
 }
 
-app.use(json());
+app.use(express.json());
 
 app.get("/api/test", (req, res) => {
     console.log(req.body);
 
-    res.sendStatus(200, "hello");
+    res.json({
+        hello: "world"
+    })
 });
 
 var server = https.createServer(options, app)
