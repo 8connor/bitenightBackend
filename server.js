@@ -16,9 +16,7 @@ app.use(json());
 app.get("/api/test", (req, res) => {
     console.log(req.body);
 
-    res.json({
-        hello: "world"
-    });
+    res.sendStatus(200, "hello");
 });
 
 var server = https.createServer(options, app)
