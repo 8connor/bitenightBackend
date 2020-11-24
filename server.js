@@ -2,7 +2,7 @@ const { json } = require("body-parser");
 const express = require("express");
 const https = require("https")
 const app = express();
-const fs = require("fs")
+const fs = require("fs");
 
 const PORT = 4001;
 
@@ -16,6 +16,8 @@ app.use(json());
 app.get("/api/test", (req, res) => {
     console.log(req);
     console.log(req.body);
+
+    console.log(req.connection.remoteAddress)
 
     res.sendStatus(200);
 });
