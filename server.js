@@ -14,11 +14,8 @@ const options = {
 app.use(json());
 
 app.get("/api/test", (req, res) => {
-    console.log(req);
     console.log(req.body);
-
-    console.log(req.connection.remoteAddress)
-
+    
     res.sendStatus(200);
 });
 
