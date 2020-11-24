@@ -4,6 +4,10 @@ const https = require("https");
 const fs = require("fs");
 const PORT = 4001;
 
+require("dotenv").config();
+
+const key = process.env.API_KEY;
+
 const options = {
     key: fs.readFileSync('./key.pem'),
     cert: fs.readFileSync('./cert.pem')
@@ -16,8 +20,9 @@ app.use((req, res, next) => {
 })
 
 app.get("/api/grabKey", (req, res) => {
+    console.log(key)
     res.json({
-        access: process.env.API_KEY
+        access: key
     });
 });
 
